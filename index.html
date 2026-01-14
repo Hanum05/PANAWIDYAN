@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANAWIDYAN - Eco-Friendly Fertilizer</title>
+    <!-- Tailwind CSS untuk styling cepat dan responsif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons untuk ikon-ikon cantik -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Poppins untuk kesan modern dan rapi -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .leaf-pattern {
+            background-color: #f0fdf4;
+            background-image: radial-gradient(#15803d 0.5px, transparent 0.5px), radial-gradient(#15803d 0.5px, #f0fdf4 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.1;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#16a34a', // Hijau Pucuk Daun
+                        secondary: '#14532d', // Hijau Tua Hutan
+                        accent: '#dcfce7', // Hijau Muda background
+                        soil: '#78350f', // Coklat tanah (sedikit aksen)
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- NAVIGATION -->
+    <nav class="bg-white/90 backdrop-blur-md fixed w-full z-50 shadow-sm border-b border-green-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <!-- Logo Placeholder -->
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white">
+                        <i data-lucide="leaf"></i>
+                    </div>
+                    <span class="font-bold text-2xl text-secondary tracking-tight">PANAWIDYAN</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-gray-600 hover:text-primary transition font-medium">Beranda</a>
+                    <a href="#latar-belakang" class="text-gray-600 hover:text-primary transition font-medium">Masalah</a>
+                    <a href="#solusi" class="text-gray-600 hover:text-primary transition font-medium">Solusi</a>
+                    <a href="#produk" class="text-gray-600 hover:text-primary transition font-medium">Produk</a>
+                    <a href="#tim" class="text-gray-600 hover:text-primary transition font-medium">Tim Kami</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 leaf-pattern z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-green-50/80 z-0"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <span class="inline-block py-1 px-3 rounded-full bg-green-100 text-green-800 text-sm font-semibold mb-4 border border-green-200">
+                    PKM-PM "Pengabdian Masyarakat"
+                </span>
+                <h1 class="text-4xl lg:text-6xl font-bold text-secondary mb-6 leading-tight">
+                    Suburkan Tanaman,<br>Selamatkan Lingkungan.
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Pemberdayaan Ibu Balita Posyandu Kampung Lestari Kebonsari melalui Integrasi Limbah Popok dan Gulma Babadotan Berbasis <span class="text-primary font-bold">Eco-Friendly Fertilizer</span>.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#latar-belakang" class="px-8 py-3 bg-primary text-white rounded-full font-semibold hover:bg-green-700 transition shadow-lg shadow-green-200 flex items-center justify-center gap-2">
+                        Pelajari Lebih Lanjut <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#produk" class="px-8 py-3 bg-white text-primary border-2 border-primary rounded-full font-semibold hover:bg-green-50 transition flex items-center justify-center">
+                        Lihat Produk
+                    </a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 w-full">
+                <!-- Gambar Hero Placeholder -->
+                <div class="w-full aspect-video bg-green-200 rounded-2xl shadow-2xl flex items-center justify-center border-4 border-white relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-secondary opacity-10"></div>
+                    <div class="text-center p-6">
+                        <i data-lucide="sprout" class="w-20 h-20 text-secondary mx-auto mb-4 opacity-50"></i>
+                        <h3 class="text-2xl font-bold text-secondary opacity-50">GAMBAR KEGIATAN / HERO</h3>
+                        <p class="text-sm text-secondary opacity-40 mt-2">Masukkan foto kegiatan ibu-ibu atau tanaman subur di sini</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LATAR BELAKANG (GRID CARDS) -->
+    <section id="latar-belakang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Latar Belakang Program</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Mengapa program PANAWIDYAN ini penting untuk Kampung Lestari Kebonsari?
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-green-50 p-8 rounded-2xl border border-green-100 hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-6 shadow-sm">
+                        <i data-lucide="trash-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Masalah Limbah Popok</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Penggunaan popok sekali pakai sangat tinggi namun minim pengelolaan. Limbah sering dibuang ke sungai, mencemari ekosistem. Plastik dan gel popok butuh ratusan tahun untuk terurai.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-green-50 p-8 rounded-2xl border border-green-100 hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-6 shadow-sm">
+                        <i data-lucide="flower-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Potensi Gulma Babadotan</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Wilayah Kebonsari memiliki banyak Gulma Babadotan (*Ageratum conyzoides*) yang dianggap pengganggu. Padahal, ia kaya Nitrogen dan senyawa bioaktif sebagai pestisida alami.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-green-50 p-8 rounded-2xl border border-green-100 hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-6 shadow-sm">
+                        <i data-lucide="home" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Budaya Urban Farming</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Warga aktif melakukan *Urban Farming*, namun terkendala biaya pupuk kimia dan perawatan. Dibutuhkan solusi mandiri untuk mendukung ketahanan pangan keluarga.
+                    </p>
+                </div>
+
+                <!-- Card 4 (Jembatan Solusi) -->
+                <div class="bg-secondary text-white p-8 rounded-2xl shadow-xl transform md:scale-105">
+                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white mb-6">
+                        <i data-lucide="lightbulb" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Integrasi PANAWIDYAN</h3>
+                    <p class="text-green-100 leading-relaxed text-sm">
+                        Jembatan antara masalah dan potensi. Gel popok (retensi air) + Nutrisi Babadotan (Hara Organik) = Solusi berkelanjutan untuk lingkungan dan pertanian kota.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT SHOWCASE -->
+    <section id="produk" class="py-20 bg-gradient-to-br from-green-900 to-green-800 text-white relative overflow-hidden">
+        <!-- Decorative blobs -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-yellow-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                
+                <!-- Kiri: Deskripsi Produk -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-sm font-bold tracking-widest text-green-300 uppercase mb-2">Produk Unggulan</h2>
+                    <h3 class="text-4xl lg:text-5xl font-bold mb-6">Eco-Friendly Fertilizer</h3>
+                    <p class="text-green-100 text-lg mb-8 leading-relaxed">
+                        Mengubah persepsi limbah popok dari "sampah berbahaya" menjadi sumber daya bermanfaat. Pupuk ini menggabungkan kemampuan menahan air dari gel popok dengan nutrisi tinggi dari gulma liar.
+                    </p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Retensi Air Tinggi</h4>
+                                <p class="text-sm text-green-200">Gel popok menyimpan cadangan air efektif untuk lahan sempit.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Kaya Nutrisi Organik</h4>
+                                <p class="text-sm text-green-200">Ekstrak Babadotan menyediakan Nitrogen dan proteksi alami.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Kanan: Gambar Produk -->
+                <div class="lg:w-1/2 w-full">
+                    <div class="relative">
+                        <!-- Placeholder Gambar Produk -->
+                        <div class="aspect-square bg-white rounded-3xl shadow-2xl p-4 transform rotate-3 hover:rotate-0 transition duration-500 flex flex-col items-center justify-center border-b-8 border-green-200 text-gray-400">
+                            <!-- Icon Produk -->
+                            <svg class="w-32 h-32 mb-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                            </svg>
+                            <h4 class="text-3xl font-bold text-gray-800 uppercase tracking-wide">Gambar Produk</h4>
+                            <p class="text-center px-8 mt-2 text-sm">
+                                "Foto kemasan pupuk atau hasil tanaman yang subur ditempatkan di sini."
+                            </p>
+                        </div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -right-6 bg-yellow-400 text-green-900 font-bold py-4 px-6 rounded-full shadow-lg transform rotate-12">
+                            100% Organik
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION (Spam Text Area Layout) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <!-- Logo Area -->
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <div class="w-64 h-64 bg-green-50 rounded-full border-4 border-dashed border-green-300 flex items-center justify-center flex-col text-center p-6">
+                        <span class="text-4xl font-bold text-primary mb-2">LOGO</span>
+                        <p class="text-xs text-gray-500">Logo PKM PANAWIDYAN<br> ditempatkan di sini</p>
+                    </div>
+                </div>
+                
+                <!-- Text Area -->
+                <div class="w-full md:w-2/3">
+                    <h3 class="text-2xl font-bold text-secondary mb-4">Visi & Misi Kami</h3>
+                    <p class="text-gray-600 mb-4 text-justify">
+                        <!-- Spam text placeholder as requested for layout demonstration -->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <p class="text-gray-600 mb-4 text-justify">
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-6">
+                        <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-primary">
+                            <h4 class="font-bold text-gray-800">Target Mitra</h4>
+                            <p class="text-sm text-gray-500">Posyandu Kampung Lestari</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-primary">
+                            <h4 class="font-bold text-gray-800">Fokus Utama</h4>
+                            <p class="text-sm text-gray-500">Edukasi & Produksi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section id="tim" class="py-20 bg-green-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-secondary">Tim Pelaksana</h2>
+                <p class="text-gray-600 mt-2">Mahasiswa Penggerak Perubahan</p>
+            </div>
+
+            <!-- Team Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Member 1 (Ketua) -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center group">
+                    <div class="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden relative border-2 border-primary">
+                        <!-- Placeholder Avatar -->
+                        <div class="flex items-center justify-center h-full w-full text-gray-400">
+                            <i data-lucide="user" class="w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Nama Ketua</h3>
+                    <p class="text-primary text-sm font-medium mb-3">Ketua Tim</p>
+                    <p class="text-xs text-gray-500 italic">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                    </p>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center group">
+                    <div class="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden relative border-2 border-green-200">
+                        <div class="flex items-center justify-center h-full w-full text-gray-400">
+                            <i data-lucide="user" class="w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Anggota 1</h3>
+                    <p class="text-gray-500 text-sm font-medium mb-3">Divisi Produksi</p>
+                    <p class="text-xs text-gray-500 italic">
+                        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+                    </p>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center group">
+                    <div class="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden relative border-2 border-green-200">
+                        <div class="flex items-center justify-center h-full w-full text-gray-400">
+                            <i data-lucide="user" class="w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Anggota 2</h3>
+                    <p class="text-gray-500 text-sm font-medium mb-3">Divisi Edukasi</p>
+                    <p class="text-xs text-gray-500 italic">
+                        "Duis aute irure dolor in reprehenderit in voluptate velit esse."
+                    </p>
+                </div>
+
+                <!-- Tambah lagi jika anggota lebih dari 3 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION / FOOTER -->
+    <footer class="bg-secondary text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="leaf" class="text-green-400"></i>
+                        <span class="text-2xl font-bold">PANAWIDYAN</span>
+                    </div>
+                    <p class="text-green-100 text-sm leading-relaxed mb-4">
+                        Program Kreativitas Mahasiswa - Pengabdian Masyarakat. <br>
+                        Bersama Ibu Balita Kampung Lestari Kebonsari mewujudkan lingkungan bersih dan mandiri pangan.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-green-300">Tautan Cepat</h4>
+                    <ul class="space-y-2 text-green-100 text-sm">
+                        <li><a href="#beranda" class="hover:text-white transition">Beranda</a></li>
+                        <li><a href="#latar-belakang" class="hover:text-white transition">Tentang Masalah</a></li>
+                        <li><a href="#produk" class="hover:text-white transition">Produk Kami</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact (Placeholder text) -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-green-300">Hubungi Kami</h4>
+                    <ul class="space-y-3 text-green-100 text-sm">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span>Kampung Lestari, Kebonsari</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                            <span>panawidyan.pkm@email.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                            <span>@panawidyan_pkm</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-green-800 pt-8 text-center text-green-400 text-xs">
+                <p>&copy; 2026 Tim PKM-PM PANAWIDYAN. All rights reserved.</p>
+                <p class="mt-2">Template created for Student Creativity Program.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script to Initialize Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
