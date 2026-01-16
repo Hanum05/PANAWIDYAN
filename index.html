@@ -112,8 +112,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center gap-2">
-                    <!-- Logo Image (Navbar): Tampil penuh tanpa crop/outline -->
-                    <img src="logo1.png" alt="Logo PANAWIDYAN" class="h-12 w-auto object-contain">
+                    <!-- Logo Image (Navbar): Tampil penuh tanpa crop/outline + Fallback -->
+                    <div class="relative h-12 w-12 flex items-center justify-center">
+                        <img src="logo1.png" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" alt="Logo PANAWIDYAN" class="h-12 w-auto object-contain">
+                        <!-- Fallback Text -->
+                        <div class="hidden absolute inset-0 bg-gray-100 border border-gray-200 rounded flex items-center justify-center text-[8px] text-gray-500 font-mono p-1 text-center">
+                            logo1.png
+                        </div>
+                    </div>
                     <span class="font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary tracking-tight">PANAWIDYAN</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
@@ -280,8 +286,12 @@
                         
                         <!-- Kartu 1 (Front - Awal) -->
                         <div class="card-item card-pos-0" id="card-1">
-                            <div class="w-56 h-56 bg-white flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-gray-100 shadow-inner">
-                                <img src="produk1.png" alt="Tampak Depan" class="w-full h-full object-cover">
+                            <div class="w-56 h-56 bg-white flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-gray-100 shadow-inner relative">
+                                <img src="produk1.png" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" alt="Tampak Depan" class="w-full h-full object-cover relative z-10">
+                                <!-- Fallback Text -->
+                                <div class="hidden absolute inset-0 bg-gray-200 flex items-center justify-center text-xs text-gray-500 font-mono break-all p-1 text-center">
+                                    produk1.png
+                                </div>
                             </div>
                             <h4 class="text-xl font-bold text-gray-800">Tampak Depan</h4>
                             <p class="text-xs text-gray-500 mt-2 px-4 text-center">Kemasan PANAWIDYAN</p>
@@ -289,8 +299,12 @@
 
                         <!-- Kartu 2 (Middle - Awal) -->
                         <div class="card-item card-pos-1" id="card-2">
-                            <div class="w-56 h-56 bg-white flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-gray-100 shadow-inner">
-                                <img src="produk2.png" alt="Tampak Kanan" class="w-full h-full object-cover">
+                            <div class="w-56 h-56 bg-white flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-gray-100 shadow-inner relative">
+                                <img src="produk2.png" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" alt="Tampak Kanan" class="w-full h-full object-cover relative z-10">
+                                <!-- Fallback Text -->
+                                <div class="hidden absolute inset-0 bg-gray-200 flex items-center justify-center text-xs text-gray-500 font-mono break-all p-1 text-center">
+                                    produk2.png
+                                </div>
                             </div>
                             <h4 class="text-xl font-bold text-gray-800">Tampak Kanan</h4>
                             <p class="text-xs text-gray-500 mt-2 px-4 text-center">Sisi Samping Kemasan</p>
@@ -298,8 +312,12 @@
 
                         <!-- Kartu 3 (Back - Awal) -->
                         <div class="card-item card-pos-2" id="card-3">
-                            <div class="w-56 h-56 bg-white flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-gray-100 shadow-inner">
-                                <img src="produk3.png" alt="Tampak Kiri" class="w-full h-full object-cover">
+                            <div class="w-56 h-56 bg-white flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-gray-100 shadow-inner relative">
+                                <img src="produk3.png" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" alt="Tampak Kiri" class="w-full h-full object-cover relative z-10">
+                                <!-- Fallback Text -->
+                                <div class="hidden absolute inset-0 bg-gray-200 flex items-center justify-center text-xs text-gray-500 font-mono break-all p-1 text-center">
+                                    produk3.png
+                                </div>
                             </div>
                             <h4 class="text-xl font-bold text-gray-800">Tampak Kiri</h4>
                             <p class="text-xs text-gray-500 mt-2 px-4 text-center">Informasi Nilai Gizi & Cara Pakai</p>
@@ -322,12 +340,15 @@
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row gap-12 items-center">
-                <!-- Logo Area (Visi Misi): Full Circle Crop -->
+                <!-- Logo Area (Visi Misi): Full Circle Crop + Fallback -->
                 <div class="w-full md:w-1/3 flex justify-center">
-                    <!-- Menghapus padding (p-6) agar gambar full satu lingkaran -->
-                    <div class="w-64 h-64 bg-white rounded-full border-4 border-green-200 shadow-xl relative overflow-hidden group">
-                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition duration-500 z-10"></div>
-                        <img src="logo.png" alt="Logo Besar PANAWIDYAN" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="w-64 h-64 bg-white rounded-full border-4 border-green-200 shadow-xl relative overflow-hidden group flex items-center justify-center">
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition duration-500 z-10 pointer-events-none"></div>
+                        <img src="logo.png" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" alt="Logo Besar PANAWIDYAN" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 relative z-0">
+                        <!-- Fallback Text -->
+                        <div class="hidden absolute inset-0 bg-gray-100 flex items-center justify-center text-lg text-gray-500 font-mono">
+                            logo.png
+                        </div>
                     </div>
                 </div>
                 
@@ -372,9 +393,13 @@
                     
                     <!-- Member 1 (Ketua) -->
                     <div class="bg-white p-2 sm:p-6 rounded-2xl shadow-sm hover:shadow-xl transition text-center group border border-green-50 hover:border-green-200">
-                        <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-primary shadow-md">
-                            <!-- Tambahan onerror: Jika foto1.png tidak ada, muncul inisial AR -->
-                            <img src="foto1.png" onerror="this.src='https://ui-avatars.com/api/?name=Aulia+Rahma&background=16a34a&color=fff'" alt="Aulia Rahma Hanum" class="w-full h-full object-cover">
+                        <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-primary shadow-md flex items-center justify-center">
+                            <!-- Foto 1 -->
+                            <img src="foto1.png" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" alt="Aulia Rahma Hanum" class="w-full h-full object-cover relative z-10">
+                            <!-- Fallback Text -->
+                            <div class="hidden absolute inset-0 bg-gray-200 flex items-center justify-center text-[8px] sm:text-xs text-gray-500 font-mono break-all p-1">
+                                foto1.png
+                            </div>
                         </div>
                         <h3 class="text-xs sm:text-lg font-bold text-gray-900 group-hover:text-primary transition leading-tight">Aulia Rahma Hanum</h3>
                         <p class="text-primary text-[10px] sm:text-sm font-medium mb-1 sm:mb-3">Ketua Tim</p>
@@ -385,9 +410,13 @@
 
                     <!-- Member 2 (Anggota 1) -->
                     <div class="bg-white p-2 sm:p-6 rounded-2xl shadow-sm hover:shadow-xl transition text-center group border border-green-50 hover:border-green-200">
-                        <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-green-200 shadow-md">
-                            <!-- Tambahan onerror: Jika foto2.png tidak ada, muncul inisial AN -->
-                            <img src="foto2.png" onerror="this.src='https://ui-avatars.com/api/?name=Aisyah+Nurrul&background=14532d&color=fff'" alt="Aisyah Nurrul Aini" class="w-full h-full object-cover">
+                        <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-green-200 shadow-md flex items-center justify-center">
+                            <!-- Foto 2 -->
+                            <img src="foto2.png" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" alt="Aisyah Nurrul Aini" class="w-full h-full object-cover relative z-10">
+                            <!-- Fallback Text -->
+                            <div class="hidden absolute inset-0 bg-gray-200 flex items-center justify-center text-[8px] sm:text-xs text-gray-500 font-mono break-all p-1">
+                                foto2.png
+                            </div>
                         </div>
                         <h3 class="text-xs sm:text-lg font-bold text-gray-900 group-hover:text-primary transition leading-tight">Aisyah Nurrul Aini</h3>
                         <p class="text-gray-500 text-[10px] sm:text-sm font-medium mb-1 sm:mb-3">Anggota 1</p>
@@ -398,9 +427,13 @@
 
                     <!-- Member 3 (Anggota 2) -->
                     <div class="bg-white p-2 sm:p-6 rounded-2xl shadow-sm hover:shadow-xl transition text-center group border border-green-50 hover:border-green-200">
-                        <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-green-200 shadow-md">
-                            <!-- Tambahan onerror: Jika foto3.png tidak ada, muncul inisial HS -->
-                            <img src="foto3.png" onerror="this.src='https://ui-avatars.com/api/?name=Halimatus+Sadiah&background=14532d&color=fff'" alt="Halimatus Sa'diah" class="w-full h-full object-cover">
+                        <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-green-200 shadow-md flex items-center justify-center">
+                            <!-- Foto 3 -->
+                            <img src="foto3.png" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" alt="Halimatus Sa'diah" class="w-full h-full object-cover relative z-10">
+                            <!-- Fallback Text -->
+                            <div class="hidden absolute inset-0 bg-gray-200 flex items-center justify-center text-[8px] sm:text-xs text-gray-500 font-mono break-all p-1">
+                                foto3.png
+                            </div>
                         </div>
                         <h3 class="text-xs sm:text-lg font-bold text-gray-900 group-hover:text-primary transition leading-tight">Halimatus Sa'diah</h3>
                         <p class="text-gray-500 text-[10px] sm:text-sm font-medium mb-1 sm:mb-3">Anggota 2</p>
@@ -415,9 +448,13 @@
                     
                     <!-- Member 4 (Anggota 3) -->
                     <div class="bg-white p-2 sm:p-6 rounded-2xl shadow-sm hover:shadow-xl transition text-center group border border-green-50 hover:border-green-200">
-                        <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-green-200 shadow-md">
-                            <!-- Tambahan onerror: Jika foto4.png tidak ada, muncul inisial NI -->
-                            <img src="foto4.png" onerror="this.src='https://ui-avatars.com/api/?name=Nilna+Inayatan&background=14532d&color=fff'" alt="Nilna Inayatan Nafiah" class="w-full h-full object-cover">
+                        <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-green-200 shadow-md flex items-center justify-center">
+                            <!-- Foto 4 -->
+                            <img src="foto4.png" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" alt="Nilna Inayatan Nafiah" class="w-full h-full object-cover relative z-10">
+                            <!-- Fallback Text -->
+                            <div class="hidden absolute inset-0 bg-gray-200 flex items-center justify-center text-[8px] sm:text-xs text-gray-500 font-mono break-all p-1">
+                                foto4.png
+                            </div>
                         </div>
                         <h3 class="text-xs sm:text-lg font-bold text-gray-900 group-hover:text-primary transition leading-tight">Nilna Inayatan Nafiah</h3>
                         <p class="text-gray-500 text-[10px] sm:text-sm font-medium mb-1 sm:mb-3">Anggota 3</p>
@@ -428,9 +465,13 @@
 
                     <!-- Member 5 (Anggota 4) -->
                     <div class="bg-white p-2 sm:p-6 rounded-2xl shadow-sm hover:shadow-xl transition text-center group border border-green-50 hover:border-green-200">
-                        <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-green-200 shadow-md">
-                            <!-- Tambahan onerror: Jika foto5.png tidak ada, muncul inisial MR -->
-                            <img src="foto5.png" onerror="this.src='https://ui-avatars.com/api/?name=Rizki+Adji&background=14532d&color=fff'" alt="Muhammad Rizki Adji Yunanta" class="w-full h-full object-cover">
+                        <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-green-200 shadow-md flex items-center justify-center">
+                            <!-- Foto 5 -->
+                            <img src="foto5.png" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" alt="Muhammad Rizki Adji Yunanta" class="w-full h-full object-cover relative z-10">
+                            <!-- Fallback Text -->
+                            <div class="hidden absolute inset-0 bg-gray-200 flex items-center justify-center text-[8px] sm:text-xs text-gray-500 font-mono break-all p-1">
+                                foto5.png
+                            </div>
                         </div>
                         <h3 class="text-xs sm:text-lg font-bold text-gray-900 group-hover:text-primary transition leading-tight">Muhammad Rizki Adji Yunanta</h3>
                         <p class="text-gray-500 text-[10px] sm:text-sm font-medium mb-1 sm:mb-3">Anggota 4</p>
@@ -453,9 +494,13 @@
                 <!-- Brand -->
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <!-- Logo Footer: Background lingkaran putih -->
-                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-2 shadow-lg">
-                            <img src="logo1.png" alt="Logo PANAWIDYAN" class="w-full h-full object-contain">
+                        <!-- Logo Footer: Background lingkaran putih + Fallback -->
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-2 shadow-lg relative overflow-hidden">
+                            <img src="logo1.png" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" alt="Logo PANAWIDYAN" class="w-full h-full object-contain relative z-10">
+                            <!-- Fallback Text -->
+                            <div class="hidden absolute inset-0 bg-gray-100 flex items-center justify-center text-[10px] text-gray-500 font-mono break-all p-1 text-center">
+                                logo1.png
+                            </div>
                         </div>
                         <span class="text-2xl font-bold">PANAWIDYAN</span>
                     </div>
