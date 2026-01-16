@@ -112,10 +112,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center gap-2">
-                    <!-- Logo Image (Navbar): Dibuat lingkaran penuh & crop -->
-                    <div class="w-10 h-10 rounded-full overflow-hidden border border-green-200 shadow-sm">
-                        <img src="logo.png" alt="Logo PANAWIDYAN" class="w-full h-full object-cover">
-                    </div>
+                    <!-- Logo Image (Navbar): Tampil penuh tanpa crop/outline -->
+                    <img src="logo.png" alt="Logo PANAWIDYAN" class="h-12 w-auto object-contain">
                     <span class="font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary tracking-tight">PANAWIDYAN</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
@@ -369,14 +367,14 @@
             <!-- Container Utama Tim -->
             <div class="flex flex-col gap-4 sm:gap-8">
                 
-                <!-- Baris Atas (3 Kolom TETAP, bahkan di HP) -->
+                <!-- Baris Atas (3 Kolom TETAP) -->
                 <div class="grid grid-cols-3 gap-2 sm:gap-8">
                     
                     <!-- Member 1 (Ketua) -->
                     <div class="bg-white p-2 sm:p-6 rounded-2xl shadow-sm hover:shadow-xl transition text-center group border border-green-50 hover:border-green-200">
-                        <!-- Foto: Full Circle Crop -->
                         <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-primary shadow-md">
-                            <img src="foto1.png" alt="Aulia Rahma Hanum" class="w-full h-full object-cover">
+                            <!-- Tambahan onerror: Jika foto1.png tidak ada, muncul inisial AR -->
+                            <img src="foto1.png" onerror="this.src='https://ui-avatars.com/api/?name=Aulia+Rahma&background=16a34a&color=fff'" alt="Aulia Rahma Hanum" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-xs sm:text-lg font-bold text-gray-900 group-hover:text-primary transition leading-tight">Aulia Rahma Hanum</h3>
                         <p class="text-primary text-[10px] sm:text-sm font-medium mb-1 sm:mb-3">Ketua Tim</p>
@@ -385,10 +383,11 @@
                         </p>
                     </div>
 
-                    <!-- Member 2 -->
+                    <!-- Member 2 (Anggota 1) -->
                     <div class="bg-white p-2 sm:p-6 rounded-2xl shadow-sm hover:shadow-xl transition text-center group border border-green-50 hover:border-green-200">
                         <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-green-200 shadow-md">
-                            <img src="foto2.png" alt="Aisyah Nurrul Aini" class="w-full h-full object-cover">
+                            <!-- Tambahan onerror: Jika foto2.png tidak ada, muncul inisial AN -->
+                            <img src="foto2.png" onerror="this.src='https://ui-avatars.com/api/?name=Aisyah+Nurrul&background=14532d&color=fff'" alt="Aisyah Nurrul Aini" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-xs sm:text-lg font-bold text-gray-900 group-hover:text-primary transition leading-tight">Aisyah Nurrul Aini</h3>
                         <p class="text-gray-500 text-[10px] sm:text-sm font-medium mb-1 sm:mb-3">Anggota 1</p>
@@ -397,10 +396,11 @@
                         </p>
                     </div>
 
-                    <!-- Member 3 -->
+                    <!-- Member 3 (Anggota 2) -->
                     <div class="bg-white p-2 sm:p-6 rounded-2xl shadow-sm hover:shadow-xl transition text-center group border border-green-50 hover:border-green-200">
                         <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-green-200 shadow-md">
-                            <img src="foto3.png" alt="Halimatus Sa'diah" class="w-full h-full object-cover">
+                            <!-- Tambahan onerror: Jika foto3.png tidak ada, muncul inisial HS -->
+                            <img src="foto3.png" onerror="this.src='https://ui-avatars.com/api/?name=Halimatus+Sadiah&background=14532d&color=fff'" alt="Halimatus Sa'diah" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-xs sm:text-lg font-bold text-gray-900 group-hover:text-primary transition leading-tight">Halimatus Sa'diah</h3>
                         <p class="text-gray-500 text-[10px] sm:text-sm font-medium mb-1 sm:mb-3">Anggota 2</p>
@@ -410,13 +410,14 @@
                     </div>
                 </div>
 
-                <!-- Baris Bawah (2 Kolom TETAP, di tengah) -->
+                <!-- Baris Bawah (2 Kolom TETAP) -->
                 <div class="grid grid-cols-2 gap-2 sm:gap-8 w-full sm:w-2/3 mx-auto">
                     
-                    <!-- Member 4 -->
+                    <!-- Member 4 (Anggota 3) -->
                     <div class="bg-white p-2 sm:p-6 rounded-2xl shadow-sm hover:shadow-xl transition text-center group border border-green-50 hover:border-green-200">
                         <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-green-200 shadow-md">
-                            <img src="foto4.png" alt="Nilna Inayatan Nafiah" class="w-full h-full object-cover">
+                            <!-- Tambahan onerror: Jika foto4.png tidak ada, muncul inisial NI -->
+                            <img src="foto4.png" onerror="this.src='https://ui-avatars.com/api/?name=Nilna+Inayatan&background=14532d&color=fff'" alt="Nilna Inayatan Nafiah" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-xs sm:text-lg font-bold text-gray-900 group-hover:text-primary transition leading-tight">Nilna Inayatan Nafiah</h3>
                         <p class="text-gray-500 text-[10px] sm:text-sm font-medium mb-1 sm:mb-3">Anggota 3</p>
@@ -425,10 +426,11 @@
                         </p>
                     </div>
 
-                    <!-- Member 5 -->
+                    <!-- Member 5 (Anggota 4) -->
                     <div class="bg-white p-2 sm:p-6 rounded-2xl shadow-sm hover:shadow-xl transition text-center group border border-green-50 hover:border-green-200">
                         <div class="w-14 h-14 sm:w-24 sm:h-24 bg-gray-100 rounded-full mx-auto mb-2 sm:mb-4 overflow-hidden relative border-2 border-green-200 shadow-md">
-                            <img src="foto5.png" alt="Muhammad Rizki Adji Yunanta" class="w-full h-full object-cover">
+                            <!-- Tambahan onerror: Jika foto5.png tidak ada, muncul inisial MR -->
+                            <img src="foto5.png" onerror="this.src='https://ui-avatars.com/api/?name=Rizki+Adji&background=14532d&color=fff'" alt="Muhammad Rizki Adji Yunanta" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-xs sm:text-lg font-bold text-gray-900 group-hover:text-primary transition leading-tight">Muhammad Rizki Adji Yunanta</h3>
                         <p class="text-gray-500 text-[10px] sm:text-sm font-medium mb-1 sm:mb-3">Anggota 4</p>
